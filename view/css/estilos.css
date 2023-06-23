@@ -1,0 +1,199 @@
+
+.fondo {
+    margin-top: 1vh;
+    background: url(../imagenes/relojFondo.png) no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+
+.header{
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+.footer {
+    position: fixed;
+    right: 15%;
+    bottom: 10px;
+    left: 15%;
+    border-top: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+.inputText{
+    color: #000000;
+}
+
+
+.lightBorder {
+    border:1px solid lightgray;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+.centerButton{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.centerForm{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+}
+
+div.userForm {
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:5px;
+}
+
+div.userForm label { text-align:right; }
+div.userForm label:after { content: ":"; }
+/**********************************************************************************************************************/
+/*************************************************** TABLE ************************************************************/
+.table-blue {
+    --bs-table-bg: #89a1ff; /* cabecera y filas pares */
+    --bs-table-striped-bg: #c5d7f2; /* filas impares */
+    --bs-table-striped-color: #000; /* texto filas impares */
+    --bs-table-active-bg: #bacbe6;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #bfd1ec;
+    --bs-table-hover-color: #000;
+    color: #000; /* texto filas pares */
+    border-color: #0038ff; /* separación entre filas */
+}
+
+.table-wrapper {
+    width: 100%;
+    height: 500px; /* Altura de ejemplo */
+    overflow: auto;
+}
+
+.table-wrapper table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-wrapper table thead {
+    position: -webkit-sticky; /* Safari... */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+table.fixed {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.fixed td {
+    overflow: hidden;
+}
+
+
+/**********************************************************************************************************************/
+/************************************************MOSTRAR PASS**********************************************************/
+.swtich-container {
+    position: relative;
+    display: inline-block;
+    width: 65px; /* Anoche del contenedor */
+    height: 20px; /* Alto del contenedor */
+    border-radius:20px;
+    border:rgba(2, 137, 155, 0.050); /* Bordeado fuera del switch */
+}
+
+.swtich-container input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ce0303;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Alto de la bola */
+    width: 20px; /* Ancho de la bola */
+    left: 0px; /* Ubicación Izquierda de la bola */
+    bottom: 0px; /* Ubicación Arriba-Abajo de la bola */
+    background-color: white; /* Color de la bola */
+    -webkit-transition: .2s; /* Velocidad de transición */
+    transition: .2s; /* Velocidad de transición de Webkit*/
+}
+
+input:checked + .slider {
+    background-color: #0b9a00;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(45px); /* Desplazamiento Webkit*/
+    -ms-transform: translateX(45px); /* Desplazamiento */
+    transform: translateX(45px); /* Desplazamiento */
+}
+
+
+/*------ Cambio SHOW y HIDE ---------*/
+
+.on {
+    display: none;
+}
+
+.on, .off {
+    color: white; /* Color SHOW-HIDE */
+    position: absolute; /* Posición */
+    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 25%;
+    font-size: 10px; /* Tamaño de letra */
+    font-family: Verdana, sans-serif; /* Fuente de letra */
+}
+
+.on {
+    left: auto;
+    right: 20px; /* Ubicación Derecha de la palabra HIDE */
+    top: 11px; /* Ubicación Arriba-Abajo de la palabra HIDE */
+
+}
+
+.off {
+    left: auto;
+    right: -10px; /* Ubicación Derecha de la palabra SHOW */
+    top: 11px; /* Ubicación Arriba-Abajo de la palabra SHOW */
+}
+
+input:checked + .slider .on {
+    display: block;
+}
+
+input:checked + .slider .off {
+    display: none;
+}
+
+
+/* Slider */
+
+.slider {
+    border-radius: 17px;
+}
+
+.slider:before {
+    border-radius: 50%;
+}
+/**********************************************************************************************************************/

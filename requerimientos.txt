@@ -1,0 +1,3 @@
+MySql       #Gestor de bases de datos
+PHP8.2      #Lenguaje utilizados
+
